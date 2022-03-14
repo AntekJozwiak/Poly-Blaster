@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     RaycastHit slopeHit;
+    internal float moveDirction;
+    internal object controller;
 
     private bool OnSlope()
     {
