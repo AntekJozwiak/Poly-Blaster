@@ -15,11 +15,14 @@ public class GunScript : MonoBehaviour
     public float FireRate = 1.15f;
     public float maxAmmo;
     public float currentAmmo;
+    public AudioSource gunSound;
+    public Animator anim;
 
     List<Quaternion> pellets;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         pellets = new List<Quaternion>(pelletCount);
 
         for (int i = 0; i < pelletCount; i++)
@@ -48,6 +51,11 @@ public class GunScript : MonoBehaviour
             }
         }
 
+        if(Input.GetMouseButtonUp(0))
+        {
+            anim.SetTrigger("shoot");
+        }
+
     }
 
     void fire()
@@ -60,6 +68,15 @@ public class GunScript : MonoBehaviour
             pellet.GetComponent<Rigidbody>().AddForce(pellet.transform.forward * Vel);
 
             i++;
+
+            gunSound.Play();
+            anim.SetTrigger("shoot");
+            Debug.Log("Trigger");
         }
+    }
+
+    public void PlayGunSound()
+    {
+        gunSound.Play();
     }
 }
