@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7303022373985136027}
   - component: {fileID: 9183851243546308194}
   - component: {fileID: 7179999036377858175}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: gun
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3cb5f103012ea345b1ca739e5d0d966, type: 2}
+  - {fileID: 2100000, guid: a47360312efcb164d8ced44e5781599d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,6 +215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bullet contact flash
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085258464990419021, guid: e5cfd9153ec06a240b31f1e9e284afd3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7085258464990419022, guid: e5cfd9153ec06a240b31f1e9e284afd3,
         type: 3}
