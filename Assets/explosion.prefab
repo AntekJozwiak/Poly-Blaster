@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1241649228462633377}
   - component: {fileID: 1241649228462633390}
   - component: {fileID: 1241649228462633391}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -4875,7 +4875,7 @@ GameObject:
   - component: {fileID: 1241649228512622031}
   - component: {fileID: 1241649228512622028}
   - component: {fileID: 1241649228512622029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4913,7 +4913,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -9740,7 +9740,7 @@ GameObject:
   - component: {fileID: 1241649229037766265}
   - component: {fileID: 1241649229037766150}
   - component: {fileID: 1241649229037766151}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9780,7 +9780,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
