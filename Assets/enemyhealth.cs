@@ -9,7 +9,8 @@ public class enemyhealth : MonoBehaviour
     public ParticleSystem explosionparticleSystem;
     public MeshRenderer mr;
     public bool once = true;
-
+    public Collider col;
+    public AudioSource explosound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,8 +22,9 @@ public class enemyhealth : MonoBehaviour
             {
                 Destroy(gameObject, interval);
                 Destroy(mr);
+                Destroy(col);
                 explosionparticleSystem.Play();
-
+                explosound.Play();
             }
         }
     }
