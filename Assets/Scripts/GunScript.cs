@@ -17,6 +17,7 @@ public class GunScript : MonoBehaviour
     public float currentAmmo;
     public AudioSource gunSound;
     public Animator anim;
+    public GameObject cam;
 
     List<Quaternion> pellets;
 
@@ -62,8 +63,14 @@ public class GunScript : MonoBehaviour
     {
         for (int i = 0; i < pelletCount; i++)
         {
+
             pellets[i] = Random.rotation;
             GameObject pellet = Instantiate(projectile, BarrelExit.position, BarrelExit.transform.rotation);
+            RaycastHit hit;
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity))
+            {
+                pellet.transform.LookAt(hit.point);
+            }
             pellet.transform.rotation = Quaternion.RotateTowards(pellet.transform.rotation, pellets[i], spreadAngle);
             pellet.GetComponent<Rigidbody>().AddForce(pellet.transform.forward * Vel);
 
