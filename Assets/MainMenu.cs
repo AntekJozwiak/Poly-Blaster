@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     public void BackPressed()
     {
         anim.SetTrigger("BackCamSlide");
+        Debug.Log("aids");
         firstSlide.SetActive(true);
         secondSlide.SetActive(false);
     }
