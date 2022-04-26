@@ -78,7 +78,6 @@ public class GunScript : MonoBehaviour
 
             gunSound.Play();
             anim.SetTrigger("shoot");
-            Debug.Log("Trigger");
         }
     }
 

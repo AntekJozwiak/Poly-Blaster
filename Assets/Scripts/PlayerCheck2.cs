@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerCheck : MonoBehaviour
+public class PlayerCheck2 : MonoBehaviour
 {
     [SerializeField] Animator anim;
 
@@ -11,7 +11,7 @@ public class PlayerCheck : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            anim.SetTrigger("MovePlatform");
+            anim.SetTrigger("MovePlatform2");
         }
     }
 
