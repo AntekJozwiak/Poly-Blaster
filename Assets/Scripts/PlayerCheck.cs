@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class fellaKilla : MonoBehaviour
+public class PlayerCheck : MonoBehaviour
 {
+    [SerializeField] Animator anim;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Collided with player");
-            SceneManager.LoadScene("Main");
+            anim.SetTrigger("MovePlatform");
+            Debug.Log("3 big Guys ");
         }
     }
 
