@@ -140,9 +140,9 @@ GameObject:
   - component: {fileID: 8395136413591049562}
   - component: {fileID: 7151735686732076819}
   - component: {fileID: 7151735686732076818}
-  - component: {fileID: 7151735686732076829}
   - component: {fileID: 7151735686732076828}
   - component: {fileID: 7151735686732076816}
+  - component: {fileID: 1566017782448667135}
   m_Layer: 0
   m_Name: rotated fella
   m_TagString: Untagged
@@ -252,34 +252,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7151735686732076829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8034835592030532751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b1726620e1938248b3fb52aef4f2de4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 7151735686732076828}
-  player: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 12
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 12
-  attackRange: 6
-  playerInSightRange: 0
-  playerInAttackRange: 0
 --- !u!195 &7151735686732076828
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -290,7 +262,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.14555141
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -298,8 +270,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.1844165
-  m_BaseOffset: 0.09220825
+  m_Height: 0.27
+  m_BaseOffset: 0.18
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &7151735686732076816
@@ -314,13 +286,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed57bfa1d59cdb4791f0bc52478837b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 2
+  interval: 1
   health: 2
   explosionparticleSystem: {fileID: 8249232026536124137}
   mr: {fileID: 8395136413591049562}
   once: 1
   col: {fileID: 7151735686732076819}
   explosound: {fileID: 7151735687030516028}
+--- !u!114 &1566017782448667135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8034835592030532751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b674aa70e01bb0e42a27e5278db79a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 7151735686732076828}
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 15
+  timeBetweenAttacks: 0
+  projectile: {fileID: 0}
+  sightRange: 40
+  attackRange: 30
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!1001 &7151735687335188719
 PrefabInstance:
   m_ObjectHideFlags: 0

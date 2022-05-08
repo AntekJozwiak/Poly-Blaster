@@ -1,16 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class ColliderIgnore : MonoBehaviour
 {
-    public GameObject player;
+    public Transform bulletPrefab;
+
     void Start()
-    {       
-        Physics.IgnoreCollision(player.GetComponent<Collider>(), GetComponent<Collider>());
-        
-
-
+    {
+        Transform bullet = Instantiate(bulletPrefab) as Transform;
+        Physics.IgnoreCollision(bullet.GetComponent<Collider>(), GetComponent<Collider>());
     }
-
 }

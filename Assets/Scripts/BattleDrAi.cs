@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class pBattleDrAi : MonoBehaviour
+public class BattleDrAi : MonoBehaviour
 {
     public NavMeshAgent agent;
 
