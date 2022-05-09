@@ -11,7 +11,7 @@ public class fellaKilla : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Collided with player");
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("Main 2");
         }
     }
 
