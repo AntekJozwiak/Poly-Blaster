@@ -85,5 +85,4 @@ public class BattleDrAi : MonoBehaviour
     {
         alreadyAttacked = false;
     }
-
 }
