@@ -1,5 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
+using TMPro;
 
 public class BattleDrAi : MonoBehaviour
 {
@@ -20,10 +24,26 @@ public class BattleDrAi : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    public float spreadAngle;
+    public Transform BarrelExit;
+    public int pelletCount;
+    List<Quaternion> pellets;
+    public float Vel;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+    }
+
+    void Start()
+    {
+        pellets = new List<Quaternion>(pelletCount);
+
+        for (int i = 0; i < pelletCount; i++)
+        {
+            pellets.Add(Quaternion.Euler(Vector3.zero));
+        }
     }
 
     private void Update()
@@ -72,15 +92,27 @@ public class BattleDrAi : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            fire();
 
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
+
+    void fire()
+    {
+        for (int i = 0; i < pelletCount; i++)
+        {
+            GameObject pellet = Instantiate(projectile, BarrelExit.position, BarrelExit.transform.rotation);
+            pellet.transform.rotation = Quaternion.RotateTowards(pellet.transform.rotation, pellets[i], spreadAngle);
+
+            pellet.GetComponent<Rigidbody>().AddForce(pellet.transform.forward * Vel);
+
+            i++;
+        }
+    }
+
     private void ResetAttack()
     {
         alreadyAttacked = false;

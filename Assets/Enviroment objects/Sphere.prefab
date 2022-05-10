@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7179999036377858175}
   m_Layer: 3
   m_Name: Sphere
-  m_TagString: gun
+  m_TagString: redbullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

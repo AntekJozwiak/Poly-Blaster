@@ -21,8 +21,28 @@ public class MainMenu : MonoBehaviour
         firstSlide.SetActive(true);
         secondSlide.SetActive(false);
     }
-    public void Settings()
+    public void Generators()
     {
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene("Generators");
+    }
+
+    public void Kamino()
+    {
+        SceneManager.LoadScene("Kamino");
+    }
+
+    public void GeneratorsDis()
+    {
+        SceneManager.LoadScene("GeneratorsDis");
+    }
+
+    public void KaminoDis()
+    {
+        SceneManager.LoadScene("KaminoDis");
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

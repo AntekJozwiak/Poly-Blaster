@@ -72,6 +72,7 @@ public class GunScript : MonoBehaviour
                 pellet.transform.LookAt(hit.point);
             }
             pellet.transform.rotation = Quaternion.RotateTowards(pellet.transform.rotation, pellets[i], spreadAngle);
+            Debug.Log(pellet.transform.forward * Vel);
             pellet.GetComponent<Rigidbody>().AddForce(pellet.transform.forward * Vel);
 
             i++;

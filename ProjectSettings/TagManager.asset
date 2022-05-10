@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - gun
   - Killa
+  - Fire
+  - redbullet
   layers:
   - Default
   - TransparentFX
