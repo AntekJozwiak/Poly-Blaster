@@ -26,9 +26,12 @@ public class BattleDrAi : MonoBehaviour
 
     public float spreadAngle;
     public Transform BarrelExit;
+    public Transform BarrelExit2;
     public int pelletCount;
     List<Quaternion> pellets;
     public float Vel;
+
+    public GameObject Centre;
 
     private void Awake()
     {
@@ -104,9 +107,15 @@ public class BattleDrAi : MonoBehaviour
     {
         for (int i = 0; i < pelletCount; i++)
         {
+            pellets[i] = Random.rotation;
             GameObject pellet = Instantiate(projectile, BarrelExit.position, BarrelExit.transform.rotation);
+            RaycastHit hit;
+            if (Physics.Raycast(Centre.transform.position, Centre.transform.forward, out hit, Mathf.Infinity))
+            {
+                pellet.transform.LookAt(hit.point);
+            }
             pellet.transform.rotation = Quaternion.RotateTowards(pellet.transform.rotation, pellets[i], spreadAngle);
-
+            Debug.Log(pellet.transform.forward * Vel);
             pellet.GetComponent<Rigidbody>().AddForce(pellet.transform.forward * Vel);
 
             i++;
