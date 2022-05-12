@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9183851243546308194}
   - component: {fileID: 7179999036377858175}
   - component: {fileID: -694354143360496410}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Sphere 1
   m_TagString: redbullet
   m_Icon: {fileID: 0}
@@ -115,11 +115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95801fad792a6043bddec586d5ef36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 2
+  interval: 1
   collisionparticleSystem: {fileID: 900270903840536635}
   mr: {fileID: 7836678263315680074}
   once: 1
-  rb: {fileID: 7303022373985136027}
+  rb: {fileID: 0}
   balls: 1
 --- !u!64 &7179999036377858175
 MeshCollider:
@@ -232,7 +232,7 @@ PrefabInstance:
     - target: {fileID: 7085258464990419021, guid: e5cfd9153ec06a240b31f1e9e284afd3,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7085258464990419022, guid: e5cfd9153ec06a240b31f1e9e284afd3,
         type: 3}

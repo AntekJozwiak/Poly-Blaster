@@ -21,6 +21,11 @@ public class GunScript : MonoBehaviour
 
     List<Quaternion> pellets;
 
+    private void Awake()
+    {
+        gunSound.playOnAwake = false;
+    }
+
     void Start()
     {
         anim = GetComponent<Animator>();

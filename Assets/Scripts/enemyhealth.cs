@@ -5,6 +5,8 @@ using UnityEngine;
 public class enemyhealth : MonoBehaviour
 {
     public float interval;
+    public GameObject muzzle1;
+    public GameObject muzzle2;
     public float health;
     public ParticleSystem explosionparticleSystem;
     public MeshRenderer mr;
@@ -22,6 +24,8 @@ public class enemyhealth : MonoBehaviour
             {
                 Destroy(gameObject, interval);
                 Destroy(mr);
+                Destroy (muzzle1);
+                Destroy (muzzle2);
                 Destroy(col);
                 explosionparticleSystem.Play();
                 explosound.Play();

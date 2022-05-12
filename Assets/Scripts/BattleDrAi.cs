@@ -30,6 +30,7 @@ public class BattleDrAi : MonoBehaviour
     public int pelletCount;
     List<Quaternion> pellets;
     public float Vel;
+    public AudioSource gunSound;
 
     public GameObject Centre;
 
@@ -96,6 +97,7 @@ public class BattleDrAi : MonoBehaviour
         if (!alreadyAttacked)
         {
             fire();
+            fire2();
 
 
             alreadyAttacked = true;
@@ -117,6 +119,29 @@ public class BattleDrAi : MonoBehaviour
             pellet.transform.rotation = Quaternion.RotateTowards(pellet.transform.rotation, pellets[i], spreadAngle);
             Debug.Log(pellet.transform.forward * Vel);
             pellet.GetComponent<Rigidbody>().AddForce(pellet.transform.forward * Vel);
+            gunSound.Play();
+            
+
+            i++;
+        }
+    }
+
+    void fire2()
+    {
+        for (int i = 0; i < pelletCount; i++)
+        {
+            new WaitForSeconds(1000f);
+            pellets[i] = Random.rotation;
+            GameObject pellet = Instantiate(projectile, BarrelExit2.position, BarrelExit2.transform.rotation);
+            RaycastHit hit;
+            if (Physics.Raycast(Centre.transform.position, Centre.transform.forward, out hit, Mathf.Infinity))
+            {
+                pellet.transform.LookAt(hit.point);
+            }
+            pellet.transform.rotation = Quaternion.RotateTowards(pellet.transform.rotation, pellets[i], spreadAngle);
+            Debug.Log(pellet.transform.forward * Vel);
+            pellet.GetComponent<Rigidbody>().AddForce(pellet.transform.forward * Vel);
+            gunSound.Play();
 
             i++;
         }
