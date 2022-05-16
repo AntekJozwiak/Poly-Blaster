@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
 
 
 
-    IEnumerator StopWatch()
+    public IEnumerator StopWatch()
     {
         while (true)
         {

@@ -44,15 +44,18 @@ public class GunScript : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            if (currentAmmo > 0)
+            if(Time.timeScale == 1)
             {
-                if (time > FireRate)
+                if (currentAmmo > 0)
                 {
-                    currentAmmo--;
+                    if (time > FireRate)
+                    {
+                        currentAmmo--;
 
-                    time = 0;
+                        time = 0;
 
-                    fire();
+                        fire();
+                    }
                 }
             }
         }

@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject Player;
     public GameObject pauseMenuUI;
+    [SerializeField] private PlayerLook playerLook;
+    [SerializeField] private PlayerMovement playerMovement;
 
     void Update()
     {
@@ -30,7 +32,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false; 
+        Cursor.visible = false;
+        playerLook.enabled = true;
+        playerMovement.enabled = true;
     }
     void Pause()
     {
@@ -39,7 +43,8 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Player.GetComponent<PlayerLook>().enable = false;
+        playerLook.enabled = false;
+        playerMovement.enabled = false;
     }
     public void LoadMenu()
 
