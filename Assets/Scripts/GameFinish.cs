@@ -10,7 +10,6 @@ public class GameFinish : MonoBehaviour
     public GameObject GameEndUI;
     [SerializeField] private PlayerLook playerLook;
     [SerializeField] private PlayerMovement playerMovement;
-    //public float endTime;
     [SerializeField] private float gameTimer;
     public Timer timer;
 
