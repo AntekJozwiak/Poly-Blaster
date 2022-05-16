@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95801fad792a6043bddec586d5ef36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 1
+  interval: 4
   collisionparticleSystem: {fileID: 900270903840536635}
   mr: {fileID: 7836678263315680074}
   once: 1

@@ -22,7 +22,7 @@ public class KillBullet : MonoBehaviour
 
         rb.velocity = Vector3.zero;
 
-        if (other.gameObject.CompareTag("Untagged") || other.gameObject.CompareTag ("redbullet")  && once)
+        if (other.gameObject.CompareTag("Untagged") || other.gameObject.CompareTag ("redbullet") || other.gameObject.CompareTag("Ground") && once)
         {
 
             var em = collisionparticleSystem.emission;
