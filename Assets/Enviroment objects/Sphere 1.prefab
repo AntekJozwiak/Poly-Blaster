@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7303022373985136027}
   - component: {fileID: 9183851243546308194}
   - component: {fileID: 7179999036377858175}
-  - component: {fileID: -694354143360496410}
+  - component: {fileID: 5722479211444250677}
   m_Layer: 7
   m_Name: Sphere 1
   m_TagString: redbullet
@@ -135,7 +135,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &-694354143360496410
+--- !u!114 &5722479211444250677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2732256099144289621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992ef6bdf856fad4d8d11cf3830d5387, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c316f579d02d964d8d2b07e3c644b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7939145302548521077
