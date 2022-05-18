@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7303022373985136027}
   - component: {fileID: 9183851243546308194}
   - component: {fileID: 7179999036377858175}
-  m_Layer: 3
+  m_Layer: 13
   m_Name: Sphere
   m_TagString: gun
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ PrefabInstance:
     - target: {fileID: 7085258464990419021, guid: e5cfd9153ec06a240b31f1e9e284afd3,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7085258464990419022, guid: e5cfd9153ec06a240b31f1e9e284afd3,
         type: 3}

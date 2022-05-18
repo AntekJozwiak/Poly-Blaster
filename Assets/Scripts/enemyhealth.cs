@@ -18,18 +18,22 @@ public class enemyhealth : MonoBehaviour
     {
         if (other.gameObject.tag == "gun")
         {
-            health -= 1;
+            dodamage(1);
+        }
+    }
+    public void dodamage(float dad)
+    {
+        health -= dad;
 
-            if (health <= 0)
-            {
-                Destroy(gameObject, interval);
-                Destroy(mr);
-                Destroy (muzzle1);
-                Destroy (muzzle2);
-                Destroy(col);
-                explosionparticleSystem.Play();
-                explosound.Play();
-            }
+        if (health <= 0)
+        {
+            Destroy(gameObject, interval);
+            Destroy(mr);
+            Destroy(muzzle1);
+            Destroy(muzzle2);
+            Destroy(col);
+            explosionparticleSystem.Play();
+            explosound.Play();
         }
     }
 }
