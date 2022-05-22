@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class dmg : MonoBehaviour
 {
+    public AudioSource hitsound;
     public GameObject box;
     public Vector3 boxsize = new Vector3(2, 0.5f, 1.7f);
     public bool slicing;
     public List<GameObject> sliced;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +19,21 @@ public class dmg : MonoBehaviour
     bool prevsliced;
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Time.timeScale = 0.25f;
+
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            Time.timeScale = 1f;
+        }
+
         if (Input.GetKey(KeyCode.Mouse0))
         {
             gameObject.GetComponent<Animator>().SetBool("Hit", true);
+
         }
 
         if (slicing)

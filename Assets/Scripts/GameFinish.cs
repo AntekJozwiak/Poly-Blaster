@@ -26,8 +26,11 @@ public class GameFinish : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Pause();
-        timer.StopCoroutine("StopWatch");
+        if (collision.gameObject.tag == "Player")
+        {
+            Pause();
+            timer.StopCoroutine("StopWatch");
+        }
     }
     void Pause()
     {

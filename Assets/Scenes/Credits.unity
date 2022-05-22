@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15560293, g: 0.15266052, b: 0.16309571, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6914,7 +6914,7 @@ MonoBehaviour:
     was made by \"Goddeh\" you can find more of his work on youtube\n\nThe story
     continues! \n\nTo play as the starship in a 3d space invaders style game try
     playing Spac3 by Theo King, it is a continuation of the story where you must
-    fight off the driods following you into space.\n\nThe song used in the credits
+    fight off the driods following you into space\n\nThe song used in the credits
     is by my friend \"Moregone\" on soundcloud, spotify and youtube"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7138d5d0c412bd4a80b5a2229b3fd9b, type: 2}

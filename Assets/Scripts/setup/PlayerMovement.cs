@@ -71,15 +71,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse1))
-        {
-            Time.timeScale = 0.25f;
-
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 

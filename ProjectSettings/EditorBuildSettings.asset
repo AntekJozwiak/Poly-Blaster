@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KaminoDis.unity
     guid: 4aca2e7b4f8b7de4fa88f81d9313aff5
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 0ae1f4bf07c1c9b41a9825e241fe709d
   m_configObjects: {}

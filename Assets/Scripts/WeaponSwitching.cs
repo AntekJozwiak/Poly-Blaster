@@ -50,9 +50,9 @@ public class WeaponSwitching : MonoBehaviour {
             weapons[i].gameObject.SetActive(i == weaponIndex);
 
         timeSinceLastSwitch = 0f;
-
+        Time.timeScale = 1f;
         OnWeaponSelected();
     }
 
-    private void OnWeaponSelected() {  }
+    private void OnWeaponSelected() { }
 }
